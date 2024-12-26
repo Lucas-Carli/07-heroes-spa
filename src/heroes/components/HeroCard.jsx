@@ -9,7 +9,8 @@ const CharactersByHero = ({ alter_ego, characters }) => {
 
 export const HeroCard = ({ id, superhero, publisher, alter_ego, first_appearance, characters }) => {
 
-    const heroimageUrl = `/assets/heroes/${id}.jpg`;
+    // const heroimageUrl = `/assets/heroes/${id}.jpg`;
+    const heroImageUrl = `/heroes/${ id }.jpg`; // Para hacer el build de producción
 
     // const charactersByHero = (<p>{characters}</p>);
 
@@ -18,7 +19,7 @@ export const HeroCard = ({ id, superhero, publisher, alter_ego, first_appearance
             <div className="card">
                 <div className="row no-gutters">
                     <div className="col-4" >
-                        <img src={heroimageUrl} className="card-img" alt={superhero} />
+                        <img src={heroImageUrl} className="card-img" alt={superhero} />
                     </div>
 
                     <div className="col-8">
